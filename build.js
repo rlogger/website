@@ -16,12 +16,12 @@ const projectCSS = `.project-card{display:flex;justify-content:space-between;ali
 // Dark mode CSS
 const darkCSS = `@media(prefers-color-scheme:dark){body{background:#000;color:#fff}.text-gray-400{color:#9ca3af}.text-gray-500{color:#9ca3af}.hover\\:text-gray-700:hover,a:hover{color:#d1d5db}.book-author,.book-date{color:#9ca3af}.project-card{border-bottom-color:#374151}.project-card:hover{background:#1f2937}.tag{color:#9ca3af}.tag:hover{background:#1f2937}.project-content a{color:#d1d5db}.project-content code{background:#1f2937}.project-content pre{background:#1f2937}.back-link{color:#9ca3af}.back-link:hover{color:#d1d5db}}`;
 
-function nav(activePage, prefix = '') {
+function nav(activePage) {
     const booksClass = activePage === 'books' ? 'font-bold' : 'text-gray-500 hover:text-gray-700';
     const showClass = activePage === 'show' ? 'font-bold' : 'text-gray-500 hover:text-gray-700';
     return `<nav class="space-x-6 text-xs">
-                <a href="${prefix}projects.html" class="${showClass}">Show</a>
-                <a href="${prefix}books.html" class="${booksClass}">Books</a>
+                <a href="/projects" class="${showClass}">Show</a>
+                <a href="/books" class="${booksClass}">Books</a>
             </nav>`;
 }
 
@@ -54,13 +54,13 @@ function htmlHead(title, description, canonicalPath) {
 </head>`;
 }
 
-function header(activePage, prefix = '') {
+function header(activePage) {
     return `    <div class="max-w-xl mx-auto px-8 py-12">
         <header class="flex justify-between items-center mb-12">
             <h1 class="text-lg font-bold">
-                <a href="${prefix}index.html" class="hover:text-gray-700">Rajdeep Singh</a>
+                <a href="/" class="hover:text-gray-700">Rajdeep Singh</a>
             </h1>
-            ${nav(activePage, prefix)}
+            ${nav(activePage)}
         </header>`;
 }
 
@@ -87,7 +87,7 @@ function loadProjects() {
 function buildListingPage(projects) {
     const cards = projects.map(p => {
         const tags = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
-        return `                <a href="projects/${p.slug}.html" class="project-card">
+        return `                <a href="/projects/${p.slug}" class="project-card">
                     <div class="project-title">${p.title}</div>
                     <div class="project-tags">${tags}</div>
                 </a>`;
@@ -118,10 +118,10 @@ function buildProjectPages(projects) {
         const tags = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
         const html = `${htmlHead(`${p.title} - Rajdeep Singh`, p.title, `/projects/${p.slug}`)}
 <body>
-${header('show', '../')}
+${header('show')}
 
         <main>
-            <a href="../projects.html" class="back-link">&larr; Back to show</a>
+            <a href="/projects" class="back-link">&larr; Back to show</a>
             <h2 style="font-size:1.125rem;font-weight:700;margin:0 0 .5rem">${p.title}</h2>
             <div class="project-tags" style="margin-bottom:1.5rem">${tags}</div>
             <div class="project-content">
@@ -180,7 +180,7 @@ ${header('')}
         <main>
             <p class="text-sm">Page not found.</p>
             <section class="pt-4 text-xs">
-                <a href="index.html" class="text-gray-500 hover:underline">Go home</a>
+                <a href="/" class="text-gray-500 hover:underline">Go home</a>
             </section>
         </main>
     </div>
