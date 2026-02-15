@@ -1,5 +1,6 @@
 ---
 title: This Website
+description: A minimal personal site built with static HTML and CSS, hosted on Firebase. No frameworks, under 5KB per page.
 tags: [web, design]
 date: 2026-02-10
 ---

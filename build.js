@@ -19,7 +19,7 @@ const darkCSS = `@media(prefers-color-scheme:dark){body{background:#000;color:#f
 function nav(activePage) {
     const booksClass = activePage === 'books' ? 'font-bold' : 'text-gray-500 hover:text-gray-700';
     const showClass = activePage === 'show' ? 'font-bold' : 'text-gray-500 hover:text-gray-700';
-    return `<nav class="space-x-6 text-xs">
+    return `<nav aria-label="Main" class="space-x-6 text-xs">
                 <a href="/projects" class="${showClass}">Show</a>
                 <a href="/books" class="${booksClass}">Books</a>
             </nav>`;
@@ -76,6 +76,7 @@ function loadProjects() {
             return {
                 slug,
                 title: data.title || slug,
+                description: data.description || data.title || slug,
                 tags: data.tags || [],
                 date: data.date ? new Date(data.date) : new Date(),
                 html: marked(content),
@@ -87,10 +88,10 @@ function loadProjects() {
 function buildListingPage(projects) {
     const cards = projects.map(p => {
         const tags = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
-        return `                <a href="/projects/${p.slug}" class="project-card">
+        return `                <li><a href="/projects/${p.slug}" class="project-card">
                     <div class="project-title">${p.title}</div>
                     <div class="project-tags">${tags}</div>
-                </a>`;
+                </a></li>`;
     }).join('\n');
 
     const html = `${htmlHead('Show - Rajdeep Singh', "Rajdeep Singh's projects - AI, physics-informed learning, and more.", '/projects')}
@@ -116,7 +117,7 @@ function buildProjectPages(projects) {
 
     for (const p of projects) {
         const tags = p.tags.map(t => `<span class="tag">${t}</span>`).join('');
-        const html = `${htmlHead(`${p.title} - Rajdeep Singh`, p.title, `/projects/${p.slug}`)}
+        const html = `${htmlHead(`${p.title} - Rajdeep Singh`, p.description, `/projects/${p.slug}`)}
 <body>
 ${header('show')}
 
@@ -142,7 +143,7 @@ function buildSitemap(projects) {
     const projectUrls = projects.map(p =>
         `  <url>
     <loc>${SITE_URL}/projects/${p.slug}</loc>
-    <lastmod>${today}</lastmod>
+    <lastmod>${p.date.toISOString().split('T')[0]}</lastmod>
     <priority>0.7</priority>
   </url>`
     ).join('\n');
