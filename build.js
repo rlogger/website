@@ -52,6 +52,8 @@ function htmlHead(title, description, canonicalPath) {
 
     <link rel="canonical" href="${SITE_URL}${canonicalPath}">
     <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
     <style>${baseCSS}${projectCSS}${mobileCSS}${darkCSS}</style>
 </head>`;
 }
