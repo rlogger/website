@@ -49,7 +49,7 @@ function htmlHead(title, description, canonicalPath) {
     <meta name="twitter:description" content="${description}">
 
     <link rel="canonical" href="${SITE_URL}${canonicalPath}">
-    <link rel="icon" href="data:,">
+    <link rel="icon" href="/favicon.ico">
     <style>${baseCSS}${projectCSS}${darkCSS}</style>
 </head>`;
 }
