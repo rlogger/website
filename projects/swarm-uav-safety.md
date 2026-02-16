@@ -2,7 +2,7 @@
 title: "AI-Enabled Safety Assurance for Swarm UAV Operations"
 description: Survey on reliability, anomaly detection, communication architectures, formation control, and test strategies for safe AI-driven swarm UAV operations in civilian applications.
 tags: [survey, swarm robotics, fault tolerance]
-date: 2025-03-01
+date: 2026-02-14
 ---
 
 A survey on AI-enabled safety and performance assurance for swarm UAV operations, bridging gaps for safer integration into civilian applications.
