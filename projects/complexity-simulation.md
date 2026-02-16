@@ -1,7 +1,7 @@
 ---
 title: Complexity Science Simulations
 description: Agent-based models and cellular automata exploring emergent behavior — Game of Life variants, Schelling segregation, and Boids flocking with predator-prey dynamics.
-tags: [complexity, simulation, python]
+tags: [agent-based modeling, emergent dynamics]
 date: 2025-11-05
 ---
 

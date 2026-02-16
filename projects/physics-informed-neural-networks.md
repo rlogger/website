@@ -1,7 +1,7 @@
 ---
 title: Physics-Informed Neural Networks
 description: Exploring how physics-based constraints improve neural network generalization and data efficiency through embedded PDEs and symmetry-respecting architectures.
-tags: [AI, physics, research]
+tags: [PDE-constrained learning, inductive bias]
 date: 2026-01-20
 ---
 
