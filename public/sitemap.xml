@@ -16,6 +16,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://raj-singh.com/projects/jax-hdc</loc>
+    <lastmod>2026-02-15</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://raj-singh.com/projects/physics-informed-neural-networks</loc>
     <lastmod>2026-01-20</lastmod>
     <priority>0.7</priority>
@@ -23,11 +28,6 @@
   <url>
     <loc>https://raj-singh.com/projects/complexity-simulation</loc>
     <lastmod>2025-11-05</lastmod>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://raj-singh.com/projects/jax-hdc</loc>
-    <lastmod>2025-06-01</lastmod>
     <priority>0.7</priority>
   </url>
   <url>

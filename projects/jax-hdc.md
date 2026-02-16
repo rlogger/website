@@ -1,8 +1,8 @@
 ---
-title: "JAX-HDC: High-Performance Hyperdimensional Computing in JAX"
+title: "High-Performance Hyperdimensional Computing in JAX"
 description: Open-source JAX library for hyperdimensional computing and vector symbolic architectures. Implements BSC, MAP, HRR, and FHRR with XLA acceleration, achieving 8-80x speedups across CPUs, GPUs, and TPUs. Published in JMLR, 2025.
 tags: [JMLR 2025, hyperdimensional computing, JAX/XLA]
-date: 2025-06-01
+date: 2026-02-15
 ---
 
 Open-source JAX library for hyperdimensional computing (HDC) and vector symbolic architectures (VSA). Published in the Journal of Machine Learning Research, 2025.
