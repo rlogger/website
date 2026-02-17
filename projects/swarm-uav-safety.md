@@ -19,4 +19,4 @@ A survey on AI-enabled safety and performance assurance for swarm UAV operations
 
 Surveillance, delivery, search and rescue, urban air mobility.
 
-[Read the paper](/papers/AI-Enabled_Safety_and_Performance_Assurance_for_Swarm_UAV_Operations.pdf)
+*ArXiv link coming soon.*

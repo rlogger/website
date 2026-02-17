@@ -22,4 +22,4 @@ JAX-HDC provides a unified functional API for four VSA models — Binary Spatter
 - Random and feature encoders, centroid classifiers, gradient-based learning integration
 - Designed for large-scale HDC research in ML, neuro-symbolic AI, and edge computing
 
-[Read the paper](/papers/JAX-HDC_library_JLMR.pdf)
+*ArXiv link coming soon.*
