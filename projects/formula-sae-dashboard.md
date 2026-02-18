@@ -5,7 +5,7 @@ tags: [Next.js, telemetry, motorsport]
 date: 2026-02-17
 ---
 
-Real-time telemetry dashboard for [USC Formula SAE Racing Team](https://github.com/rlogger/Formula_SAE_Dashboard). Built to monitor live sensor data from the race car during testing and competition runs.
+Real-time telemetry dashboard for USC Formula SAE Racing Team. Built to monitor live sensor data from the race car during testing and competition runs.
 
 ## Overview
 
